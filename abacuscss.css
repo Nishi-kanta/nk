@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(134, 159, 160);
+ max-width: 100%;
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15rem 4rem 20rem 14rem 10rem 2rem;
+    grid-template-areas: "header header header header"
+        "navbar navbar navbar navbar"
+        "galery galery galery event "
+        "about about about about"
+        "contact contact contact contact "
+        "footer footer footer footer";
+  
+
+}
+
+.box {
+    background-color: rgb(230, 224, 224);
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    color: rgb(220, 240, 106);
+    font-size: 1.5vw;
+    /* background: linear-gradient(rgb(100, 200, 97), rgb(15, 15, 150));  */
+    background-image: url("./1.jpg");
+    /* background-size: cover; */
+     background-size: 1520px 250px;
+  
+
+}
+
+
+
+.content h1,h3{
+   
+    text-align: center;
+    position: relative;
+     top: -30px;
+} 
+.first_letter {
+    color: rgb(240, 12, 12);
+    text-shadow: 3px 4px green;
+    font-size: 5rem;
+}
+
+
+.navbar {
+    grid-area: navbar;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+
+}
+
+/* .navbar>ul {
+    background-color: rgb(174, 230, 119);
+    height: 100%;
+
+
+} */
+
+.navbar>ul>li {
+
+    display: inline-block;
+    margin: 8px;
+    padding: 4px;
+    float: right;
+    max-width: 100%;
+    width: 8vw;
+    /* position: relative; */
+
+
+}
+
+.navbar>ul>li>a {
+
+    padding: 4px;
+    text-decoration: none;
+    color: rgb(42, 87, 87);
+    font-size: 2.5vw;
+    border: 2px solid rgb(63, 75, 41);
+    border-radius: 30px;
+
+
+}
+
+.navbar>ul>li>a:hover {
+    background-color: aquamarine;
+    color: black;
+    transition: 0.3s;
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu>ul {
+    background-color: rgb(43, 43, 54);
+  
+    max-height: 100%;
+    max-width: 100%;
+  position: relative;
+   margin-top: 7px;
+    
+
+}
+
+.submenu>ul>li {
+    list-style: none;
+     padding: 10px;
+     
+}
+
+.submenu>ul>li:hover {
+
+    border: 2px solid black;
+     max-width:100%;
+    background-color: rgb(92, 228, 92);
+    border-radius: 20px;
+    
+
+}
+
+.submenu>ul>li>a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+
+}
+
+
+.submenu>ul>li>a:hover {
+
+    color: rgb(32, 34, 34);
+    transition: 0.1s;
+
+}
+
+.submenu>ul>li>a:focus {
+
+    color: rgb(240, 217, 14);
+    transition: 0.1s;
+
+}
+
+.submenu>ul>li>a:link {
+
+    color: rgb(245, 10, 194);
+    transition: 0.1s;
+
+}
+
+.submenu>ul>li>a:active {
+
+    color: rgb(117, 7, 12);
+    transition: 0.1s;
+
+}
+
+.submenu>ul>li>a:visited {
+
+    color: rgb(69, 119, 119);
+    transition: 0.1s;
+
+}
+
+.navbar #dropdown:hover .submenu {
+    display: block;
+
+}
+
+
+
+ul img {
+    position: relative;
+    left: 10px;
+    float: left;
+    max-width: 6%;
+    border: 3px;
+    margin-top: 7px;
+    border-radius: 100%;
+    height: 40px;
+}
+
+
+.galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
+    grid-area: galery;
+     /* border: 2px solid rgb(247, 247, 52); */
+}
+
+.photop {
+    height: 300px;
+    padding: 20px;
+    /* border: 2px solid lightgray; */
+    text-align: center;
+}
+.photop img {
+    width: 10vw;
+    height: 15vh;
+}
+
+.photop p {
+    margin-top: 20px;
+    font-size: 1vw;
+}
+
+.event {
+     text-align: center;
+        border: 2px solid rgb(177, 170, 170);
+     overflow: auto;
+     
+}
+.event .eve{
+     /* border: 2px solid yellow; */
+     background-color: rgb(245, 242, 239);
+     top:0;
+     position: sticky;
+   
+}
+
+
+.about {
+    grid-area: about;
+    overflow: auto;
+     border: 2px solid black; 
+}
+
+
+.contact {
+    grid-area: contact;
+}
+
+.contact pre {
+    font-size: 1.3vw;
+
+
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 2vw;
+    background-color: black;
+    color: beige;
+    grid-area: footer;
+}
+
+@media only screen and (max-width:800px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 8rem 3rem 15rem 15rem 20rem 20rem 4rem;
+        grid-template-areas: 
+        "header"
+            "navbar"
+            "galery"
+            "event"
+            "about"
+            "contact "
+            "footer"
+    }
+    
+}
+
+@media only screen and (max-width:1350px) {
+
+
+    .course
+
+        {
+        position: fixed;
+    }
+    .submenu
+    {
+        position: relative;
+    }
+    .submenu>ul {
+        background-color: rgb(240, 240, 241);
+        max-height:30vh;
+        max-width: 40vw;
+        position: absolute;
+      
+         overflow: none;
+       
+    
+    }
+
+}
