@@ -16,7 +16,7 @@ function logg() {
       alert("you are successfull logedin");
        // window.location.replace ="abacus.html";
       //  window.location.href = "http://www.w3schools.com";
-           window.open("abacus.html","_blank");
+           window.open("index.html","_blank");
     }
    
 }
